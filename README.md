@@ -14,7 +14,14 @@ This script is actually doing the following steps:
 
     ./node_modules/protractor/bin/webdriver-manager update
 
+### Configuration
 
+### Execute Tests locally using standalone Selenium server
+
+1- Make sure your application is running
+2- Start selenium server
+
+   ./bin/selenium-server.sh
 
 
 
