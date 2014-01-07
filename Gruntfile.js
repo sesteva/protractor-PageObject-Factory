@@ -14,13 +14,12 @@ module.exports = function (grunt) {
         parallel:{
             selenium:{
                 options:{
-                    stream:true
+                    stream: true
                 },
-                tasks: [{cmd: './bin/selenium-server.sh'}, {cmd: './bin/test.sh'}]
+                tasks: [{cmd: "./bin/selenium-server.sh"}, {cmd: './bin/test.sh'}]
             }
         }
     });
-
 
     grunt.registerTask('test', [
         'parallel:selenium'
@@ -29,5 +28,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'test',
     ]);
+
+
 };
 
