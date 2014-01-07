@@ -2,6 +2,10 @@
     "name": "test-protractor",
     "devDependencies": {
         "protractor": "0.15.0",
-        "request": "2.30.0"
+        "request": "2.30.0",
+        "grunt": "0.4.2",
+        "load-grunt-tasks": "~0.2.0",
+        "time-grunt": "~0.2.1",
+        "grunt-parallel": "0.3.1"
     }
 }
