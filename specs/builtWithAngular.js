@@ -3,7 +3,7 @@ describe ("Built With Angular", function(){
     var page = require('../pageObjects/builtwithangular.js');
 
     beforeEach(function() {
-        browser.get("http://builtwith.angularjs.org/");
+        page.go("http://builtwith.angularjs.org/");
     });
 
     it("should mention 95 sites were done with this fw", function(){
@@ -13,14 +13,15 @@ describe ("Built With Angular", function(){
 
     it("should be able to search projects", function(){
         page.search('airline');
-        var projectsList = element.all(by.repeater('project in projectCol'));
+        var projectsList = page.getProjectsList();
         expect(projectsList.count()).toBe(1);
     });
 
-    it("should be able to search projects", function(){
+    it("should be click on a project and display details", function(){
         page.search('airline');
-        var project = element(by.repeater('project in projectCol').row(0));
+        var project  = page.getProjectsListByRow(0);
         expect(project.getText()).toMatch(/WhichAirline/);
+        page.driver().sleep(5000);
         project.click();
     });
 });

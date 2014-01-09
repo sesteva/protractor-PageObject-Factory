@@ -8,6 +8,14 @@ module.exports = factory.create({
 
     getProjectsAmount: function(){
         return element(by.binding('projects.length'));
+    },
+
+    getProjectsList: function(){
+        return element.all(by.repeater('project in projectCol'));
+    },
+
+    getProjectsListByRow: function(row){
+        return element(by.repeater('project in projectCol').row(row));
     }
 
 

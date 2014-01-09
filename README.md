@@ -18,8 +18,6 @@ This script is actually doing the following steps:
 
 protractor.conf.js
 
-
-
 ### Execute Tests locally using standalone Selenium server
 
 1- Make sure your application is running
